@@ -1,6 +1,6 @@
 # Nishu's Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio Website  [Live Link](https://nishuportfolio.netlify.app).
 
 ## Available Scripts
 
