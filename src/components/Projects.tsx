@@ -89,16 +89,16 @@ const Projects = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className='text-4xl sm:text-5xl font-bold inline border-b-4 text-textPrimary border-secondary'>
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold inline border-b-4 text-textPrimary border-secondary'>
             Projects
           </h2>
-          <p className='py-6 text-lg text-textSecondary'>Check out some of my recent work</p>
+          <p className='py-4 sm:py-6 text-base sm:text-lg text-textSecondary'>Check out some of my recent work</p>
           
           {/* Technology Filter */}
-          <div className='flex flex-wrap gap-2 mt-4'>
+          <div className='flex flex-wrap gap-2 mt-4 max-w-[600px]'>
             <motion.button
               onClick={() => setSelectedTech(null)}
-              className={`px-3 py-1 rounded-full text-sm transition-all duration-300 
+              className={`px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm transition-all duration-300 
                 ${!selectedTech ? 'bg-secondary text-primary' : 'text-textSecondary border border-secondary'}`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -109,7 +109,7 @@ const Projects = () => {
               <motion.button
                 key={tech}
                 onClick={() => setSelectedTech(tech === selectedTech ? null : tech)}
-                className={`px-3 py-1 rounded-full text-sm transition-all duration-300
+                className={`px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm transition-all duration-300
                   ${tech === selectedTech ? 'bg-secondary text-primary' : 'text-textSecondary border border-secondary'}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -122,7 +122,7 @@ const Projects = () => {
 
         <AnimatePresence mode="wait">
           <motion.div 
-            className='grid gap-8'
+            className='grid gap-6 sm:gap-8 max-w-[1200px] mx-auto'
             layout
           >
             {filteredProjects.map((project, index) => (
@@ -137,10 +137,10 @@ const Projects = () => {
                 onHoverStart={() => setHoveredProject(index)}
                 onHoverEnd={() => setHoveredProject(null)}
               >
-                <div className='grid md:grid-cols-2 gap-6'>
+                <div className='grid md:grid-cols-2 gap-4 sm:gap-6'>
                   {/* Project Image */}
                   <motion.div 
-                    className='relative group h-[300px] md:h-full overflow-hidden'
+                    className='relative group h-[200px] sm:h-[300px] md:h-full overflow-hidden'
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
@@ -174,22 +174,22 @@ const Projects = () => {
                   </motion.div>
 
                   {/* Project Info */}
-                  <div className='p-6 flex flex-col h-full'>
+                  <div className='p-4 sm:p-6 flex flex-col h-full'>
                     <div>
                       <motion.div 
-                        className='flex justify-between items-start mb-4'
+                        className='flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3 sm:mb-4'
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
-                        <h3 className='text-2xl md:text-3xl font-bold text-secondary'>
+                        <h3 className='text-xl sm:text-2xl md:text-3xl font-bold text-secondary'>
                           {project.title}
                         </h3>
-                        <p className='text-sm text-textSecondary'>{project.date}</p>
+                        <p className='text-xs sm:text-sm text-textSecondary'>{project.date}</p>
                       </motion.div>
                       
                       <motion.p 
-                        className='text-textSecondary mb-6 text-base md:text-lg'
+                        className='text-textSecondary mb-4 sm:mb-6 text-sm sm:text-base md:text-lg'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}
@@ -197,7 +197,7 @@ const Projects = () => {
                         {project.description}
                       </motion.p>
 
-                      <div className='space-y-6'>
+                      <div className='space-y-4 sm:space-y-6'>
                         {/* Features */}
                         <AnimatePresence>
                           {hoveredProject === index && (
@@ -207,10 +207,10 @@ const Projects = () => {
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.3 }}
                             >
-                              <h4 className='text-lg font-semibold text-secondary mb-2'>
+                              <h4 className='text-base sm:text-lg font-semibold text-secondary mb-2'>
                                 Key Features:
                               </h4>
-                              <ul className='grid grid-cols-1 sm:grid-cols-2 gap-2 text-textSecondary'>
+                              <ul className='grid grid-cols-1 sm:grid-cols-2 gap-2 text-textSecondary text-sm sm:text-base'>
                                 {project.features.map((feature, i) => (
                                   <motion.li
                                     key={i}

@@ -21,17 +21,20 @@ const Experience = () => {
     {
       title: 'Silver + Elite Category',
       description: 'NPTEL Ethical Hacking Course',
-      score: '78%'
+      score: '78%',
+      date: 'November 2024'
     },
     {
       title: 'Event Manager',
       description: 'Student Organization Wissen',
-      details: 'Led and organized technical events'
+      details: 'Led and organized technical events',
+      date: 'September 2022 - Present'
     },
     {
       title: 'National Level Player',
       description: 'Volleyball Team',
-      details: 'Led team to national competitions'
+      details: 'Led team to national competitions',
+      date: 'August 2018'
     }
   ];
 
@@ -103,6 +106,7 @@ const Experience = () => {
                 {achievement.details && (
                   <p className='text-textSecondary mt-2'>{achievement.details}</p>
                 )}
+                <p className='text-sm text-textSecondary mt-2 italic'>{achievement.date}</p>
               </motion.div>
             ))}
           </div>
