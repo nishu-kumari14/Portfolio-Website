@@ -5,31 +5,32 @@ import { FaCertificate } from 'react-icons/fa';
 const Certifications = () => {
   const certifications = [
     {
-      title: "Ethical Hacking Course",
-      issuer: "Great Learning",
-      date: "2024",
+      title: "Ethical Hacking",
+      issuer: "NPTEL",
+      date: "November 2024",
       category: "Silver + Elite Category",
-      description: "Comprehensive course covering cybersecurity fundamentals and ethical hacking practices."
+      description: "Certified in ethical hacking fundamentals with 78% score, covering core cybersecurity practices."
     },
     {
-      title: "Web Development",
-      issuer: "Udemy",
-      date: "2023",
-      description: "Full-stack web development course covering modern technologies and best practices."
+      title: "Server-side JavaScript with Node.js",
+      issuer: "NIIT",
+      date: "November 2024",
+      description: "Online course on backend development using Node.js for dynamic web applications."
     },
     {
-      title: "Python Programming",
+      title: "React.JS Essential Training",
+      issuer: "LinkedIn Learning",
+      date: "April 2024",
+      description: "Hands-on training in ReactJS fundamentals including components, hooks, and state management."
+    },
+    {
+      title: "HTML, CSS, and JavaScript for Web Developers",
       issuer: "Coursera",
-      date: "2022",
-      description: "Advanced Python programming concepts and applications in data science."
-    },
-    {
-      title: "Data Structures and Algorithms",
-      issuer: "GeeksforGeeks",
-      date: "2022",
-      description: "In-depth study of data structures, algorithms, and problem-solving techniques."
+      date: "April 2023",
+      description: "Front-end development course focused on modern HTML/CSS/JS techniques and responsive design."
     }
   ];
+
 
   return (
     <div id='certifications' className='w-full min-h-screen text-gray-300 py-20'>

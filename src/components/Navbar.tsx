@@ -95,7 +95,7 @@ const Navbar = () => {
       <AnimatePresence>
         {nav && (
           <motion.ul
-            className='absolute top-0 left-0 w-full h-screen bg-primary flex flex-col justify-center items-center'
+            className='fixed top-0 left-0 w-full h-screen bg-primary flex flex-col justify-center items-center z-50'
             initial={{ opacity: 0, x: '-100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
@@ -104,7 +104,7 @@ const Navbar = () => {
             {['home', 'about', 'skills', 'projects', 'experience', 'contact'].map((item) => (
               <motion.li
                 key={item}
-                className='py-6 text-4xl'
+                className='py-4 text-2xl sm:text-4xl'
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -174,8 +174,8 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Social Icons */}
-      <div className='lg:hidden fixed bottom-0 left-0 w-full bg-primary py-2 px-4 border-t border-gray-800 z-20'>
-        <div className='flex justify-around items-center'>
+      <div className='lg:hidden fixed bottom-0 left-0 w-full bg-primary py-3 px-4 border-t border-gray-800 z-20'>
+        <div className='flex justify-around items-center max-w-[400px] mx-auto'>
           {socialLinks.map((item) => (
             item.href ? (
               <motion.a
@@ -183,7 +183,7 @@ const Navbar = () => {
                 href={item.href}
                 target='_blank'
                 rel='noreferrer'
-                className='text-gray-300 hover:text-secondary'
+                className='text-gray-300 hover:text-secondary text-lg sm:text-xl'
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -193,7 +193,7 @@ const Navbar = () => {
               <motion.button
                 key={item.name}
                 onClick={item.onClick}
-                className='text-gray-300 hover:text-secondary relative'
+                className='text-gray-300 hover:text-secondary relative text-lg sm:text-xl'
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
               >
