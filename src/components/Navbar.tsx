@@ -13,7 +13,7 @@ const Navbar = () => {
   const handleDownload = () => {
     // Create a link element
     const link = document.createElement('a');
-    link.href = '/assets/Nishu_Kumari_Resume.pdf';
+    link.href = '/assets/Nishu_Kumari_Resume_Updated.pdf';
     link.download = 'Nishu_Kumari_Resume_Updated.pdf';
     document.body.appendChild(link);
     link.click();
