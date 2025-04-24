@@ -21,7 +21,7 @@ const Experience = () => {
     {
       title: 'Silver + Elite Category',
       description: 'NPTEL Ethical Hacking Course',
-      score: '78%',
+      score: '72%',
       date: 'November 2024'
     },
     {
