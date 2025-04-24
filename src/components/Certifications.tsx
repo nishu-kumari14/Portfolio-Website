@@ -16,7 +16,7 @@ const Certifications = () => {
       issuer: "NPTEL",
       date: "November 2024",
       category: "Silver + Elite Category",
-      description: "Certified in ethical hacking fundamentals with 78% score, covering core cybersecurity practices.",
+      description: "Certified in ethical hacking fundamentals with 62% score, covering core cybersecurity practices.",
       image: "/images/cert1.jpg"
     },
     {
