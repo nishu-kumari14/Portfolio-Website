@@ -11,17 +11,27 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   const handleDownload = () => {
-    // Create a link element
-    const link = document.createElement('a');
-    link.href = '/assets/Nishu_Kumari_Resume_Updated.pdf';
-    link.download = 'Nishu_Kumari_Resume_Updated.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      // Create a link element
+      const link = document.createElement('a');
+      link.href = '/Nishu_Kumari_Resume.pdf';  // Updated path
+      link.setAttribute('download', 'Nishu_Kumari_Resume.pdf');
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+      
+      // Append to body, click, and remove
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
 
-    // Show tooltip
-    setShowTooltip(true);
-    setTimeout(() => setShowTooltip(false), 2000);
+      // Show tooltip
+      setShowTooltip(true);
+      setTimeout(() => setShowTooltip(false), 2000);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      // Fallback: Open in new tab if download fails
+      window.open('/Nishu_Kumari_Resume.pdf', '_blank');
+    }
   };
 
   const socialLinks = [
