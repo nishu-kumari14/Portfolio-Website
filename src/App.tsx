@@ -10,7 +10,7 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className='animated-gradient'>
+    <div className='mesh-bg min-h-screen'>
       <Navbar />
       <Home />
       <About />
